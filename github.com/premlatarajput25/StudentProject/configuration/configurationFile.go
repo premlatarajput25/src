@@ -14,7 +14,7 @@ func GetDBConnection() (db *sql.DB, err error) {
 	dbUser := "premlata"
 	dbPassword := "premlata"
 	dbName := "studentdb"
-	// db, dberr := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/studentdb")
+	// db, dberr := sql.Open("mysql",   "root:root@tcp(127.0.0.1:3306)/studentdb)
 	db, err = sql.Open(dbDriver, dbUser+":"+dbPassword+"@tcp("+ServerName+":"+dbPort+")/"+dbName)
 	// fmt.Println("SEE " + err.Error())
 	return
