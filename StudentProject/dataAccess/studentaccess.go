@@ -1,11 +1,10 @@
-package dataAccess
+package dataaccess
 
 import (
+	"StudentProject/beans"
 	"database/sql"
 	"fmt"
 	"log"
-
-	"github.com/premlatarajput25/StudentProject/beans"
 )
 
 type StudentAccess struct {
@@ -52,15 +51,13 @@ func (studentAccess StudentAccess) InsertStudent(student *beans.Student) (err er
 	if err != nil {
 		log.Println("111111  " + err.Error())
 		return err
-	} else {
+	}
 
-		id, err1 := result.LastInsertId()
-		student.Id = id
-		fmt.Printf("id of student %d \n", uint64(id))
-		if err1 != nil {
-			return err1
-		}
-
+	id, err1 := result.LastInsertId()
+	student.Id = id
+	fmt.Printf("id of student %d \n", uint64(id))
+	if err1 != nil {
+		return err1
 	}
 
 	return err

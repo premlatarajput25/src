@@ -1,11 +1,11 @@
 package main
 
 import (
+	"StudentProject/controller"
 	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/premlatarajput25/StudentProject/controller"
 )
 
 func main() {
@@ -21,10 +21,5 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	// http.HandleFunc("/", starter)
-	// http.HandleFunc("/getStudents", getStudents)
-	// http.HandleFunc("/postStudent", postStudent)
-	// http.HandleFunc("/putStudent", putStudent)
-	// http.HandleFunc("/deleteStudent/{id}", deleteStudent)
-
+	//ctrl+c  to exit
 }
